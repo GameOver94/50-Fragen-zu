@@ -1,0 +1,212 @@
+:root {
+    --sectionMargin: 1vw;
+    --topSectionHight: 15vh;
+    --bottomSectionHight: 27vh;
+    --borderRadius1: 0.7rem;
+    --borderRadius2: 0.2rem;
+}
+
+html {
+    /* Explicitly set background color */
+    background: linear-gradient(to bottom right, darkblue, purple);
+    background-attachment: fixed;
+
+
+    /* Set default box-sizing to border-box for easier sizing of elements */
+    box-sizing: border-box;
+
+    /* Disable scrollbars by clipping page overflow */
+    overflow: hidden;
+
+    /* Set default font*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 4vh;
+  }
+
+.main {
+    position: absolute;
+    top: var(--sectionMargin);
+    left: var(--sectionMargin);
+    width: calc(100vw - 2 * var(--sectionMargin));
+    height: calc(100vh - 2 * var(--sectionMargin));
+}
+
+.subSections {
+    position: absolute;
+    /*background-color: orange;*/
+}
+
+#topSection {
+    height: var(--topSectionHight);
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0.4rem;
+
+    background-color: white;
+    opacity: 50%;
+    border-radius: var(--borderRadius1);
+}
+
+#middleSection {
+    width: 70%;
+    top: calc(var(--sectionMargin) + var(--topSectionHight));
+    height: calc(100vh - var(--sectionMargin)*4 - var(--topSectionHight) - var(--bottomSectionHight));
+}
+
+#bottomSection {
+    width:100%;
+    bottom: 0;
+    height: var(--bottomSectionHight);
+}
+
+#rightSection{
+    position: relative;
+    float: right;
+    width: calc(30% - var(--sectionMargin));
+    height: calc(100% - var(--bottomSectionHight) - var(--sectionMargin));
+}
+
+
+/* top section */
+.questionNr {
+    height: 20%;
+
+    font-size: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#question {
+    height: 80%;
+}
+
+/* middle section */
+.image{
+    height: 100%;
+    border-radius: var(--borderRadius1);
+    display: block;
+    margin: auto;
+}
+
+#multibleChoice{
+    height: 100%;
+    width:80%;
+    margin: auto;
+    margin-top: 1.5rem;
+
+}
+
+.choice{
+    background-color: white;
+    opacity: 50%;
+
+    float: left;
+    height: 1.4rem;
+    width: calc(50% - 2rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+
+
+    box-sizing: border-box;
+    padding: 0.2rem;
+    border-radius: var(--borderRadius1);
+}
+
+.choice div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* right section */
+#host {
+    width: 100%;
+    height: 50%;
+    border-radius: var(--borderRadius1);
+    position: absolute;
+    top: 60%;
+    transform: translate(0, -50%);
+
+    background-color: white;
+    opacity: 50%;
+}
+
+
+/* bottom section */
+.player {
+    float: left;
+    width: calc(94%/3);
+    height: 100%;
+}
+
+#player1,
+#player2 {
+    margin-right: 3%;
+}
+
+.webcam {
+    background-color: white;
+    opacity: 50%;
+
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    border-radius: var(--borderRadius1);
+}
+
+.bottomText {
+    width: 100%;
+    height: calc(20% - 0.2rem);
+    margin-top: 0.2rem;
+}
+
+.points {
+    float: left;
+    position: relative;
+    background-color: white;
+    opacity: 50%;
+    height: 100%;
+    width: 10%;
+    border-radius: var(--borderRadius2);
+    margin-right: 0.2rem;
+
+    box-sizing: border-box;
+    padding: 0.1rem;
+    font-weight: bold;
+}
+
+.points div {
+    height: 100%;
+    width: 100%
+}
+
+.answer {
+    float: left;
+    background-color: white;
+    opacity: 50%;
+    height: 100%;
+    width: calc(100% - 10% - 10% - 0.2rem * 2);
+    border-radius: var(--borderRadius2);
+    margin-right: 0.2rem;
+
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0.1rem;
+}
+
+.answer div{
+    height: 100%;
+    width: 100%
+}
+
+.ready {
+    float: left;
+    background-color: white;
+
+    height: 100%;
+    width: 10%;
+    border-radius: var(--borderRadius2);
+}

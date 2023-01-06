@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>50 Fragen zu ...</title>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="main">
+
+    <!-- top section with question number and question ---------------------------------------------------- -->
+    <section class="subSections" id="topSection">
+      <div class="questionNr">Frage <span id="number">5</span>/50</div>
+      <div id="question">Frage 1</div>
+    </section>
+
+    <!-- right section with space for the hosts webcam ---------------------------------------------------- -->
+    <section class="subSections" id="rightSection">
+      <div id="host"></div>
+    </section>
+
+    <!-- middle section with posible answers or images depending on the question type --------------------- -->
+    <section class="subSections" id="middleSection">
+
+      <img class="image" id="questionImage"
+        src="https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png" alt="Image not found!">
+
+      <div id="multibleChoice">
+        <div class="choice">
+          <div>a) test</div>
+        </div>
+        <div class="choice">
+          <div>b) banane</div>
+        </div>
+        <div class="choice">
+          <div>c) asdfwaerasdfawersdgnhölksfdlkadsjölwaekjdsaölfwrewafsdagfwarrdfsgwaerdsg</div>
+        </div>
+        <div class="choice">
+          <div>d) sadfweafäkölsdkföklewa</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bootom section with spce for the plyers webcams, their poins, answers and ready stadus ----------- -->
+    <section class="subSections" id="bottomSection">
+
+      <div class="player" id="player1">
+        <div class="webcam"></div>
+        <div class="bottomText">
+          <div class="points" id="points1">
+            <div>20</div>
+          </div>
+          <div class="answer" id="answer1">
+            <div>Bananenbrot sadf earösaldf awerlökjnsadf aslfökjawerlfkö dsföle</div>
+          </div>
+          <div class="ready" id="ready1"></div>
+        </div>
+      </div>
+
+      <div class="player" id="player2">
+        <div class="webcam"></div>
+        <div class="bottomText">
+          <div class="points" id="points2">
+            <div>104</div>
+          </div>
+          <div class="answer" id="answer2">
+            <div>Bananenbrot sadf earösaldf awerlökjnsadf aslfökjawerlfkö dsföle sdfögjdf asdö jlköljsadlfökj </div>
+          </div>
+          <div class="ready" id="ready2"></div>
+        </div>
+      </div>
+
+      <div class="player" id="player3">
+        <div class="webcam"></div>
+        <div class="bottomText">
+          <div class="points" id="points3">
+            <div>20</div>
+          </div>
+          <div class="answer" id="answer3">
+            <div>Bananenbrot</div>
+          </div>
+          <div class="ready" id="ready3"></div>
+        </div>
+      </div>
+
+    </section>
+  </section>
+
+
+
+  <script src="backend.js"></script>
+</body>
+
+</html>
